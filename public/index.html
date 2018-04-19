@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+</head>
+<body>
+    <input type=hidden name=isadmin value=1>
+    <input type=hidden name=roomname value=theroomname>
+    <input type=hidden name=username value=theusername>
+  <div class="container">
+    <div class="row chat-info">
+      <div class="col-md-9 col-xs-8">
+        <h2 class="room-name"><span class="room-title"></span> [<span class="users-count"></span>]</h2>
+      </div>
+      <div class="col-md-3 admin-block col-xs-4">
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><i class="fas fa-cog"></i></button>
+      </div>
+    </div>
+    <div class="row messages">
+      <div class="col-md-10 padding-null chat-room">
+        <div class="messages-block">
+          <ul id="messages">
+
+          </ul>
+        </div>
+        <div class="write-panel">
+          <div class="btn-group color-picker">
+            <button type="button" class="dropdown-toggle color-picker-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="img/color.png" alt="">
+            </button>
+            <ul class="dropdown-menu" id="colors">
+            </ul>
+          </div>
+          <span class="panel-item bold-picker">B</span>
+          <span class="panel-item italic-picker">I</span>
+          <div class="btn-group">
+            <button type="button" class="dropdown-toggle smile-picker" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              &#128515;
+            </button>
+            <ul class="dropdown-menu" id="smile">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 user-block">
+        <div class="users-list">
+          <ul id="users">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row input-block">
+      <div class="col-xs-12 padding-null " style="height: 100%;">
+        <input type="text" class="message-text">
+        <button class="send"><i class="fas fa-envelope"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Chat title</h4>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div class="btn-group color-picker">
+              <button type="button" class="dropdown-toggle color-picker-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="img/color.png" alt="">
+              </button>
+              <ul class="dropdown-menu" id="colorsForTitle">
+              </ul>
+            </div>
+            <span class="panel-item bold-picker-title">B</span>
+          </div>
+          <div>
+            <input type="text" id="title">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" id="save-title" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+    <script type="text/javascript" src="main.js">
+
+  </script>
+</body>
+</html>

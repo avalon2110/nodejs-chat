@@ -1,0 +1,250 @@
+/* Fix user-agent */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, input {
+  font-family:
+    "HelveticaNeue-Light",
+    "Helvetica Neue Light",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    "Lucida Grande",
+    sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 100%;
+}
+
+.padding-null{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+li{
+  list-style-type: none;
+}
+
+.chat-info{
+  background-color: #f0f0f0;
+}
+
+.messages{
+  padding-top: 20px;
+  border-top: 2px solid black;
+  background-color: #f0f0f0;
+}
+
+.messages-block{
+  background-color: white;
+  height: 90%;
+  overflow-y: auto;
+}
+
+.panel-item{
+  font-size: 20px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#colors, #colorsForTitle {
+  padding-left: 3px;
+  min-width: 230px;
+  padding-right: 3px;
+}
+
+#title{
+  padding: 5px;
+}
+
+#colors li {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+#colorsForTitle li {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+#smile li{
+  font-size: 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+.smile-picker, .color-picker-btn{
+  vertical-align: super;
+  background-color: inherit;
+  border: none;
+}
+
+.bold-picker{
+  font-weight: bold;
+}
+
+.italic-picker{
+  font-style: italic;
+}
+
+.color-picker{
+  padding: 0;
+}
+
+.user-block{
+  overflow-y: auto;
+  height: 100%;
+}
+
+.color-picker img{
+  vertical-align: bottom;
+  width: 20px;
+  height: 20px;
+}
+
+.active{
+  /* background-color: white; */
+  /* background-color: #d4d4d4; */
+  -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+
+.users-list ul{
+  padding-left: 0;
+}
+
+.users-list ul li {
+  font-size: 20px;
+
+}
+
+.messages-block ul{
+  padding-left: 0;
+}
+
+.message-item .user{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.message-item .message{
+  font-size: 20px;
+}
+
+.typing{
+  color: grey;
+}
+
+.admin-block{
+  padding-top: 15px;
+  text-align: right;
+}
+
+.room-name{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.users-list{
+  overflow-y: auto;
+}
+
+.message-item{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.write-panel{
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 10%;
+}
+
+.input-block{
+  padding: 10px;
+}
+
+.input-block{
+  height: 10vh;
+}
+
+.send{
+  height: 100%;
+  width: 4%;
+}
+
+.messages{
+  height: 80vh;
+}
+
+.message-text{
+  height: 100%;
+  width: 95%;
+}
+
+.chat-info{
+  height: 10vh;
+}
+
+.chat-room{
+  height: 100%;
+}
+
+
+/* media queries */
+@media only screen and (max-width: 991px) {
+  .chat-info{
+    height: 20vh;
+  }
+
+  .messages{
+    height: 60vh;
+  }
+
+  .input-block{
+    height: 20vh;
+  }
+
+  .message-text {
+    height: 50%;
+    width: 80%;
+  }
+
+  .send {
+    height: 50%;
+    width: 18%;
+  }
+
+  .chat-room{
+    height: 60%;
+  }
+
+  .users-list{
+    margin-top: 20px;
+    text-align: right;
+  }
+
+  .input-block div{
+    padding-left: 15px;
+  }
+}
